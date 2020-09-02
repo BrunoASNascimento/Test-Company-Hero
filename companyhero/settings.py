@@ -12,9 +12,10 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import sys
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 SECRET_KEY_DJANGO_CH = os.environ.get(
@@ -94,13 +95,13 @@ if 'test' in sys.argv:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'lbzsnwwx',
-            'USER': 'lbzsnwwx',
+            'NAME': 'ddbc4ss8v6ucsu',
+            'USER': 'dxjcwfradbzocm',
             'PASSWORD': SECRET_KEY_POSTGRES_CH,
-            'HOST': 'motty.db.elephantsql.com',
+            'HOST': 'ec2-35-173-94-156.compute-1.amazonaws.com',
             'PORT': '5432',
             'TEST': {
-                'NAME': 'lbzsnwwx',  # This is an important entry
+                'NAME': 'ddbc4ss8v6ucsu',  # This is an important entry
             },
         }
     }
@@ -108,13 +109,13 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'lbzsnwwx',
-            'USER': 'lbzsnwwx',
+            'NAME': 'ddbc4ss8v6ucsu',
+            'USER': 'dxjcwfradbzocm',
             'PASSWORD': SECRET_KEY_POSTGRES_CH,
-            'HOST': 'motty.db.elephantsql.com',
+            'HOST': 'ec2-35-173-94-156.compute-1.amazonaws.com',
             'PORT': '5432',
             'TEST': {
-                'NAME': 'lbzsnwwx',  # This is an important entry
+                'NAME': 'ddbc4ss8v6ucsu',  # This is an important entry
             },
         }
     }
@@ -156,3 +157,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+django_heroku.settings(locals())
