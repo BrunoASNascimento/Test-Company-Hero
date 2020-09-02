@@ -6,7 +6,7 @@ A aplicação faz a gravação de usuários no banco PostgreSQL, faz a leitura d
 
 ## Banco de dados:
 
-O banco é composto por 4 campos, sendo eles:
+O banco é composto por uma tabela (employees) composta por 4 campos, sendo eles:
 
 - username: [string] Nome do usuário (Esse campo é uma chave primária, aceita entradas de até 32 caracteres).
 - name: [string] Nome do funcionário (Esse campo aceita entradas de até 200 caracteres).
