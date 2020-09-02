@@ -4,16 +4,16 @@ from django.test import TestCase, RequestFactory
 from .views import EmployeesCreate
 
 
-# class SimpleTest(TestCase):
-#     def setUp(self):
-#         # Every test needs access to the request factory.
-#         self.factory = RequestFactory()
+class SimpleTest(TestCase):
+    def setUp(self):
+        # Every test needs access to the request factory.
+        self.factory = RequestFactory()
 
-#     def test_details(self):
-#         # Create an instance of a GET request.
-#         request = self.factory.get("/")
-#         request.user = AnonymousUser()
+    def test_details(self):
+        # Create an instance of a GET request.
+        request = self.factory.get("/")
+        request.user = AnonymousUser()
 
-#         # Test my_view() as if it were deployed at /customer/details
-#         response = EmployeesCreate(request)
-#         self.assertEqual(response.status_code, 200)
+        # Test my_view() as if it were deployed at /customer/details
+        response = EmployeesCreate(request)
+        self.assertEqual(response.status_code, 200)

@@ -1,0 +1,22 @@
+{
+    "name": "Test Company Hero: Python",
+    "description": "Test Company Hero.",
+    "image": "heroku/python",
+    "repository": "https://github.com/BrunoASNascimento/Test-Company-Hero",
+    "keywords": ["python", "django"],
+    "addons": ["heroku-postgresql"],
+    "env": {
+        "SECRET_KEY": {
+            "description": "The secret key for the Django application.",
+            "generator": "secret"
+        },
+        "SECRET_KEY_DJANGO_CH": {
+            "description": "The secret key for the Django application.",
+            "generator": "secret"
+        },
+        "SECRET_KEY_POSTGRES_CH": {
+            "description": "The secret key for the Postgres application.",
+            "generator": "secret"
+        }
+    }
+}

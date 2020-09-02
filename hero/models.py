@@ -2,16 +2,22 @@ from django.db import models
 from django.contrib.postgres.fields import ArrayField
 from django.contrib.postgres.fields import JSONField
 
-# Create your models here.
-
 
 class Employees(models.Model):
 
     class Meta:
-
+        # Table name
         db_table = 'employees'
 
-    username = models.CharField(max_length=32,primary_key=True)
+    """ 
+    
+    username: Username and primary key
+    name: Employee name
+    age: Employee age
+    enterprise: List with the names of the employees' companies
+
+    """
+    username = models.CharField(max_length=32, primary_key=True)
     name = models.CharField(max_length=200)
     age = models.IntegerField()
     enterprise = ArrayField(models.CharField(max_length=200), default=list)
