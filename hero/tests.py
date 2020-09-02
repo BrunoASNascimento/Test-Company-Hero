@@ -1,26 +1,19 @@
-from django.test import TestCase
+from django.contrib.auth.models import AnonymousUser, User
+from django.test import TestCase, RequestFactory
 
-# Create your tests here.
+from .views import EmployeesCreate
 
 
-# class YourTestClass(TestCase):
-#     @classmethod
-#     def setUpTestData(cls):
-#         print("setUpTestData: Run once to set up non-modified data for all class methods.")
-#         pass
-
+# class SimpleTest(TestCase):
 #     def setUp(self):
-#         print("setUp: Run once for every test method to setup clean data.")
-#         pass
+#         # Every test needs access to the request factory.
+#         self.factory = RequestFactory()
 
-#     def test_false_is_false(self):
-#         print("Method: test_false_is_false.")
-#         self.assertFalse(False)
+#     def test_details(self):
+#         # Create an instance of a GET request.
+#         request = self.factory.get("/")
+#         request.user = AnonymousUser()
 
-#     def test_false_is_true(self):
-#         print("Method: test_false_is_true.")
-#         self.assertTrue(False)
-
-#     def test_one_plus_one_equals_two(self):
-#         print("Method: test_one_plus_one_equals_two.")
-#         self.assertEqual(1 + 1, 2)
+#         # Test my_view() as if it were deployed at /customer/details
+#         response = EmployeesCreate(request)
+#         self.assertEqual(response.status_code, 200)

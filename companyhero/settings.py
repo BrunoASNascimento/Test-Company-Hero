@@ -29,7 +29,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # )
 
 SECRET_KEY_DJANGO_CH = 'm91%3j#1h#$9kc8e%mw1hz)^lizqjoo011&y0pn)7y#ua)peh2'
-SECRET_KEY_POSTGRES_CH = '4b6a3e550d3364b935b59d930a2fc8ddfb6a59e00fe760ce748663cb6323443d'
+SECRET_KEY_POSTGRES_CH = '84782ad205a594132a6a3e83f23eddd439d9f716e618785bad6e85c03fae0d64'
 
 
 # Quick-start development settings - unsuitable for production
@@ -98,13 +98,13 @@ if 'test' in sys.argv:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'ddbc4ss8v6ucsu',
-            'USER': 'dxjcwfradbzocm',
+            'NAME': 'd4dk8f8i23n33e',
+            'USER': 'vdhnnhleokcdmp',
             'PASSWORD': SECRET_KEY_POSTGRES_CH,
-            'HOST': 'ec2-35-173-94-156.compute-1.amazonaws.com',
+            'HOST': 'ec2-54-204-26-236.compute-1.amazonaws.com',
             'PORT': '5432',
             'TEST': {
-                'NAME': 'ddbc4ss8v6ucsu',  # This is an important entry
+                'NAME': 'd4dk8f8i23n33e',  # This is an important entry
             },
         }
     }
@@ -112,13 +112,13 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'ddbc4ss8v6ucsu',
-            'USER': 'dxjcwfradbzocm',
+            'NAME': 'd4dk8f8i23n33e',
+            'USER': 'vdhnnhleokcdmp',
             'PASSWORD': SECRET_KEY_POSTGRES_CH,
-            'HOST': 'ec2-35-173-94-156.compute-1.amazonaws.com',
+            'HOST': 'ec2-54-204-26-236.compute-1.amazonaws.com',
             'PORT': '5432',
             'TEST': {
-                'NAME': 'ddbc4ss8v6ucsu',  # This is an important entry
+                'NAME': 'd4dk8f8i23n33e',  # This is an important entry
             },
         }
     }
