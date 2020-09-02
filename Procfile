@@ -1,1 +1,1 @@
-web: gunicorn hero:app
+web: gunicorn companyhero:hero
