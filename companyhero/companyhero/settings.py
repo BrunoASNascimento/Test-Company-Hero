@@ -16,11 +16,22 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+SECRET_KEY_DJANGO_CH = os.environ.get(
+    'SECRET_KEY_DJANGO_CH',
+    'Specified environment variable is not set.'
+)
+
+SECRET_KEY_POSTGRES_CH = os.environ.get(
+    'SECRET_KEY_POSTGRES_CH',
+    'Specified environment variable is not set.'
+)
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'm91%3j#1h#$9kc8e%mw1hz)^lizqjoo011&y0pn)7y#ua)peh2'
+SECRET_KEY = SECRET_KEY_DJANGO_CH
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -80,10 +91,10 @@ WSGI_APPLICATION = 'companyhero.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': '917364',
-        'HOST': 'localhost',
+        'NAME': 'lbzsnwwx',
+        'USER': 'lbzsnwwx',
+        'PASSWORD': SECRET_KEY_POSTGRES_CH,
+        'HOST': 'motty.db.elephantsql.com',
         'PORT': '5432',
     }
 }
