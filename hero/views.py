@@ -25,7 +25,7 @@ class UsernameList(APIView):
         return Response(serializer_class.data)
 
 
-class EmployeesList(generics.ListCreateAPIView):
+class EmployeesList(APIView):
     def get(self, request, *args, **kwargs):
         queryset = Employees.objects.extra(
             where=["'{}' = any (enterprise)".format(kwargs['enterprise'])])

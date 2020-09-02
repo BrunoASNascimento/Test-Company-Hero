@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -88,17 +89,35 @@ WSGI_APPLICATION = 'companyhero.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lbzsnwwx',
-        'USER': 'lbzsnwwx',
-        'PASSWORD': SECRET_KEY_POSTGRES_CH,
-        'HOST': 'motty.db.elephantsql.com',
-        'PORT': '5432',
-    }
-}
 
+if 'test' in sys.argv:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'lbzsnwwx',
+            'USER': 'lbzsnwwx',
+            'PASSWORD': SECRET_KEY_POSTGRES_CH,
+            'HOST': 'motty.db.elephantsql.com',
+            'PORT': '5432',
+            'TEST': {
+                'NAME': 'lbzsnwwx',  # This is an important entry
+            },
+        }
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'lbzsnwwx',
+            'USER': 'lbzsnwwx',
+            'PASSWORD': SECRET_KEY_POSTGRES_CH,
+            'HOST': 'motty.db.elephantsql.com',
+            'PORT': '5432',
+            'TEST': {
+                'NAME': 'lbzsnwwx',  # This is an important entry
+            },
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
