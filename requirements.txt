@@ -1,29 +1,8 @@
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
 # platform: win-64
-asgiref=3.2.10=py_0
-autopep8=1.5.4=py_0
-ca-certificates=2020.7.22=0
-certifi=2020.6.20=py38_0
-django=3.0.3=py_0
-django-filter=2.3.0=py_0
-djangorestframework=3.11.1=py_0
-krb5=1.17.1=hc04afaa_3
-libpq=12.3=hd9aa61d_0
-openssl=1.1.1g=he774522_1
-pip=20.2.2=py38_0
-psycopg2=2.8.5=py38hba49e27_1
-pycodestyle=2.6.0=py_0
-python=3.8.5=he1778fa_0
-python_abi=3.8=1_cp38
-pytz=2020.1=py_0
-setuptools=49.6.0=py38_0
-sqlite=3.33.0=h2a8f88b_0
-sqlparse=0.3.1=py_0
-tk=8.6.10=he774522_0
-toml=0.10.1=py_0
-vc=14.1=h0510ff6_4
-vs2015_runtime=14.16.27012=hf0eaf9b_3
-wheel=0.35.1=py_0
-wincertstore=0.2=py38_0
-zlib=1.2.11=h62dcd97_4
+
+django==3.0.3
+django-filter==2.3.0
+djangorestframework==3.11.1
+psycopg2==2.8.5
