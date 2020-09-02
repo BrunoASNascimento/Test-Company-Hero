@@ -1,8 +1,8 @@
 from rest_framework.views import APIView
 from django.shortcuts import render
 from rest_framework import generics
-from .models import Employees
-from .serializers import EmployeesSerializer
+from .models import Employees, Enterprises
+from .serializers import EmployeesSerializer, EnterprisesSerializer
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 import json
@@ -12,6 +12,12 @@ class EmployeesCreate(generics.ListCreateAPIView):
     # Create documents with method POST and list all documents with method GET
     queryset = Employees.objects.all()
     serializer_class = EmployeesSerializer
+
+
+class EnterprisesCreate(generics.ListCreateAPIView):
+    # Create documents with method POST and list all documents with method GET
+    queryset = Enterprises.objects.all()
+    serializer_class = EnterprisesSerializer
 
 
 class UsernameList(APIView):

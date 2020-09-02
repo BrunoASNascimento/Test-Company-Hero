@@ -6,12 +6,30 @@ A aplicação faz a gravação de usuários no banco PostgreSQL, faz a leitura d
 
 ## Banco de dados:
 
-O banco é composto por uma tabela (employees) composta por 4 campos, sendo eles:
+O banco é composto por duas tabelas (employees e enterprises).
+
+Employees é composta pelos campos:
 
 - username: [string] Nome do usuário (Esse campo é uma chave primária, aceita entradas de até 32 caracteres).
 - name: [string] Nome do funcionário (Esse campo aceita entradas de até 200 caracteres).
 - age: [int] Idade do funcionário (Somente números inteiros entre 10 e 120 são aceitos).
 - enterprise: [list] Lista com o nome das empresas do funcionário.
+
+Enterprises é composta pelos campos:
+
+- name: [string] Nome do usuário (Esse campo é uma chave primária, aceita entradas de até 32 caracteres).
+- country: [string] País da empresa (Esse campo é uma chave primária, aceita entradas de até 200 caracteres).
+
+## Gravação de informações da empresa:
+
+Para fazer a gravação de um nova empresa, utilize o método `POST` no link `test-ch-01.herokuapp.com/enterprises/`, passando o arquivo json no formato:
+
+```
+{
+    "name": "name",
+    "country": "country"
+}
+```
 
 ## Gravação de informações do usuário:
 
