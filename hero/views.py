@@ -3,22 +3,19 @@ from django.shortcuts import render
 from rest_framework import generics
 from .models import Employees
 from .serializers import EmployeesSerializer
-
-# Create your views here.
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
-from django.http import JsonResponse
-from rest_framework import status
 import json
-from django.core.serializers.json import DjangoJSONEncoder
 
 
 class EmployeesCreate(generics.ListCreateAPIView):
+    # Create documents with method POST and list all documents with method GET
     queryset = Employees.objects.all()
     serializer_class = EmployeesSerializer
 
 
 class UsernameList(APIView):
+    # Get document by username
     def get(self, request, *args, **kwargs):
         question = get_object_or_404(Employees, pk=kwargs['username'])
         serializer_class = EmployeesSerializer(question)
@@ -26,6 +23,7 @@ class UsernameList(APIView):
 
 
 class EmployeesList(APIView):
+    # List documents by enterprise
     def get(self, request, *args, **kwargs):
         queryset = Employees.objects.extra(
             where=["'{}' = any (enterprise)".format(kwargs['enterprise'])])
