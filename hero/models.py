@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
 from django.contrib.postgres.fields import JSONField
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Employees(models.Model):
@@ -19,7 +20,10 @@ class Employees(models.Model):
     """
     username = models.CharField(max_length=32, primary_key=True)
     name = models.CharField(max_length=200)
-    age = models.IntegerField()
+    age = models.IntegerField(validators=[
+        MaxValueValidator(120),
+        MinValueValidator(10)
+    ])
     enterprise = ArrayField(models.CharField(max_length=200), default=list)
 
     def __str__(self):
