@@ -1,5 +1,9 @@
 from django.apps import AppConfig
 
 
-class HeroConfig(AppConfig):
-    name = 'hero'
+def create_app():
+    class HeroConfig(AppConfig):
+        name = 'hero'
+
+
+my_app = create_app()

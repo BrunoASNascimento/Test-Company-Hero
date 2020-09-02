@@ -1,1 +1,1 @@
-web: gunicorn companyhero:app
+web: gunicorn "app:my_app"
