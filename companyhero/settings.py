@@ -28,9 +28,6 @@ SECRET_KEY_POSTGRES_CH = os.environ.get(
     'Specified environment variable is not set.'
 )
 
-# SECRET_KEY_DJANGO_CH = 'm91%3j#1h#$9kc8e%mw1hz)^lizqjoo011&y0pn)7y#ua)peh2'
-# SECRET_KEY_POSTGRES_CH = '84782ad205a594132a6a3e83f23eddd439d9f716e618785bad6e85c03fae0d64'
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -39,7 +36,7 @@ SECRET_KEY_POSTGRES_CH = os.environ.get(
 SECRET_KEY = SECRET_KEY_DJANGO_CH
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
