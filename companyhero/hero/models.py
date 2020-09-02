@@ -11,6 +11,7 @@ class Employees(models.Model):
 
         db_table = 'employees'
 
+    username = models.CharField(max_length=32,primary_key=True)
     name = models.CharField(max_length=200)
     age = models.IntegerField()
     enterprise = ArrayField(models.CharField(max_length=200), default=list)
