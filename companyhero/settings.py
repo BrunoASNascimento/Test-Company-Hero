@@ -18,18 +18,18 @@ import django_heroku
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-# SECRET_KEY_DJANGO_CH = os.environ.get(
-#     'SECRET_KEY_DJANGO_CH',
-#     'Specified environment variable is not set.'
-# )
+SECRET_KEY_DJANGO_CH = os.environ.get(
+    'SECRET_KEY_DJANGO_CH',
+    'Specified environment variable is not set.'
+)
 
-# SECRET_KEY_POSTGRES_CH = os.environ.get(
-#     'SECRET_KEY_POSTGRES_CH',
-#     'Specified environment variable is not set.'
-# )
+SECRET_KEY_POSTGRES_CH = os.environ.get(
+    'SECRET_KEY_POSTGRES_CH',
+    'Specified environment variable is not set.'
+)
 
-SECRET_KEY_DJANGO_CH = 'm91%3j#1h#$9kc8e%mw1hz)^lizqjoo011&y0pn)7y#ua)peh2'
-SECRET_KEY_POSTGRES_CH = '84782ad205a594132a6a3e83f23eddd439d9f716e618785bad6e85c03fae0d64'
+# SECRET_KEY_DJANGO_CH = 'm91%3j#1h#$9kc8e%mw1hz)^lizqjoo011&y0pn)7y#ua)peh2'
+# SECRET_KEY_POSTGRES_CH = '84782ad205a594132a6a3e83f23eddd439d9f716e618785bad6e85c03fae0d64'
 
 
 # Quick-start development settings - unsuitable for production
