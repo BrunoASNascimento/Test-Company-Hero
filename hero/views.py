@@ -1,9 +1,8 @@
 from rest_framework.views import APIView
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from rest_framework import generics
 from .models import Employees, Enterprises
 from .serializers import EmployeesSerializer, EnterprisesSerializer
-from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 import json
 

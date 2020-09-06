@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\Bruno Nascimento\\anaconda3\\envs\\django-hero\\python.exe"
+    "python.pythonPath": "C:\\Users\\Bruno Nascimento\\anaconda3\\envs\\django-hero\\python.exe",
+    "deepcode.uploadApproved": true
 }
